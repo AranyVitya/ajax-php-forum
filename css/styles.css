@@ -1,0 +1,38 @@
+header {
+	background-color: #203744;
+	color: #fff;
+	padding: 10px 0;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.form-control {
+	box-shadow: 5px 5px 5px #888888;
+	border-radius: 0px;
+}
+
+.panel-default {
+	box-shadow: 5px 5px 5px #888888;
+	border: 0px;
+	border-radius: 0px;
+}
+
+.btn-default {
+	box-shadow: 5px 5px 5px #888888;
+}
+
+.panel-default .panel-heading {
+	background-color: #203744;
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+	border-radius: 0px;
+}
+body {
+	background-color: #D3D3D3;
+}
+
+.btn-default {
+	margin-bottom: 20px;
+	border-radius: 0px;
+}

@@ -1,32 +1,15 @@
 <?php
 
-//
+require "conf_connection.php";
+
 $name = $_POST['username'];
 $messages = $_POST['messages'];
 
-//
-echo $name .": ";
-echo $messages;
+echo   "<div class=\"panel panel-default\">
+			<div class=\"panel-heading\" id=\"name-content\">". $name ."</div>
+        	<div class=\"panel-body\" id=\"message-content\">". $messages ."</div>
+        </div>";
 
-
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "phpforum";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-
-//mysqli_select_db($conn, 'phpforum');	//Adatbázis kiválasztása
-
-mysqli_set_charset($conn, 'utf8');	//karakterkódolás beállítása
-
-//
 $sql = "INSERT INTO messages (username, messages) VALUES ('$name', '$messages')";
 
 if ($conn->query($sql) === TRUE) {
