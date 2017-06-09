@@ -47,3 +47,7 @@ body {
 	margin-bottom: 20px;
 	border-radius: 0px;
 }
+
+#date-content {
+	text-align: right;
+}
