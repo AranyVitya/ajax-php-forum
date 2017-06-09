@@ -2,7 +2,7 @@ $(function() {
 	//GET/READ -- az oldal első betöltésekor kell, hogy megjelenjenek a már beírt üzenetek
 	// pollingal megoldott ajax GET kérés
 	// setInterval-al megvalosított polling
-	//setInterval(function() {
+	setInterval(function() {
 		$.ajax({
 			url: 'php/messages_get.php',
 			dataType: 'JSON',	//dataType-ot akkor használunk ha a szevertől várjuk az adatot
@@ -26,7 +26,7 @@ $(function() {
 				}
 			},
 		});
-	//},3000);	//3 másodpercenként végrehajtja a setInterval-on belül leírt kódot
+	},3000);	//3 másodpercenként végrehajtja a setInterval-on belül leírt kódot
 	
 	//POST/CREAT
 	$('#create-form').on('submit', function(event) {
