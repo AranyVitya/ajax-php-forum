@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 require "conf_connection.php";
 
 header('Content-Type: application/json');
