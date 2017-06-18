@@ -45,17 +45,13 @@ session_start();
         <?php
         if (isset($_SESSION['username'])) {
 
-        echo '<div class="container" id="create-form">
+        echo '<div class="container" id="message-form">
                 <form>
-                    <!--<div class="form-group">
-                        <label for="name">Name:</label>
-                        <input type="text" class="form-control" id="create-username" placeholder="Enter name" name="username">
-                    </div>-->
                     <div class="form-group">
                         <label for="message">Message:</label>
                         <textarea type="text" rows="4" class="form-control" id="create-message" placeholder="Enter message" name="message"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
+                    <input type="submit" id="button_message" class="btn btn-default" value="Submit">
                 </form>
             </div>';
         }

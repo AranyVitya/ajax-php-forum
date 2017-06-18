@@ -20,7 +20,7 @@ echo    '<div class="panel panel-default">
         	<div class="panel-body" id="message-content">'. $messages .'</div>
     	</div>';
 
-$sql = "INSERT INTO messages (username, messages, currentdate) VALUES ('$name', '$messages', NOW())";
+$sql = "INSERT INTO messages (username, messages, currentdate) VALUES ('$name', '$messages', '$date')";
 
 if ($conn->query($sql) === TRUE) {
 	//echo "New record created successfully";
