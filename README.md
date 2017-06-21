@@ -27,7 +27,11 @@ Létre kell hozni egy "forum_users" nevű táblát is a Login-hoz.
 "user_password" oszlop paraméterei:  típus:  varchar(250)
                                 FONTOS!!! az ékezetes betűk miatt: illesztés: utf8_general_ci
                                 
- Még nincs megoldva a regisztrációs felület, szóval érdemes a forum_users táblába létrehozni pár felhasználót a kipróbáláshoz.
+Regisztrációhoz:
+
+"user_email" oszlop paraméterei:  típus:  varchar(50)
+                                FONTOS!!! az ékezetes betűk miatt: illesztés: utf8_general_ci
+                           
 
 
                                 
