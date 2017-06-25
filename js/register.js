@@ -22,13 +22,7 @@ $(function() {
             data: dataString,
             dataType: "html",
             success: function(data) {
-
                 $('.errormess').html(data);
-                /*if (data == 0) {
-                    $('.errormess').html('<b style="color:red;">Wrong Login Data</b>');
-                } else {
-                    document.location.href = 'messages.php';
-                }*/
             }
         });
         return false;

@@ -1,7 +1,7 @@
 $(function() {
 	//GET/READ -- az oldal első betöltésekor kell, hogy megjelenjenek a már beírt üzenetek
 	// pollingal megoldott ajax GET kérés
-	// setInterval-al megvalosított polling
+	// setTimeout-al megvalosított polling
 	(function doPolling() {
 		$.ajax({
 			url: 'php/messages_get.php',
@@ -30,13 +30,16 @@ $(function() {
 	}());
 	//POST/CREAT
 	//enter keyd
-
+    $(document).bind('keypress', function(e) {
+        if(e.keyCode==13){
+            $('#button_message').trigger('click');
+        }
+    });
 
 	$('#message-form').on('submit', function(event) {
 		event.preventDefault();	//"az alapértelmezett működési mechanizmus mgakadályozása"???
 
 		var createMessage = $('#create-message').val();
-
 
 		$.ajax({
 			url: 'php/messages_post.php',
