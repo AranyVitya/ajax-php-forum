@@ -40,21 +40,26 @@ $(function() {
 		event.preventDefault();	//"az alapértelmezett működési mechanizmus mgakadályozása"???
 
 		var createMessage = $('#create-message').val();
-
-		$.ajax({
-			url: 'php/messages_post.php',
-			method: 'POST',
-			type: 'json',
-			data: {messages:createMessage},
-			success: function(response_post) {
-							$('#create-message').val('');
-							console.log(response_post);
-                            console.log('success');
-							$('#default-panel').append(response_post);
-            },
-            error: function() {
-        					console.log('Cannot retrieve data.');
-    		}
-		});
+		if ((createMessage == '')||(createMessage == (event.keyCode==13))) {
+			$('.errormess').html('<b style="color:red;">Please Insert Your Message</b>');
+            return false;
+		} else {
+			$('.errormess').html('');
+			$.ajax({
+				url: 'php/messages_post.php',
+				method: 'POST',
+				type: 'json',
+				data: {messages:createMessage},
+				success: function(response_post) {
+								$('#create-message').val('');
+								console.log(response_post);
+								console.log('success');
+								$('#default-panel').append(response_post);
+				},
+				error: function() {
+								console.log('Cannot retrieve data.');
+				}
+			});
+		}
 	});
 });

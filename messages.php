@@ -51,11 +51,17 @@ session_start();
                         <label for="message">Message:</label>
                         <textarea type="text" rows="4" class="form-control" id="create-message" placeholder="Enter message" name="message"></textarea>
                     </div>
+                    <div>
+                        <span class="errormess"></span>
+                    </div>
                     <input type="submit" id="button_message" class="btn btn-default" value="Submit">
                 </form>
             </div>';
         }
         ?>
+    <div class="footer">
+        © Viktor Arany 2017
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
